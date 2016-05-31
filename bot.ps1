@@ -19,9 +19,9 @@ write-host $botkey
 
 while($true) {
 	$json = Invoke-WebRequest -Uri $getUpdatesLink -Body @{offset=$offset} | ConvertFrom-Json
-    Write-Host $json
-    Write-Host $json.ok
-    $l = $json.result.length
+	Write-Host $json
+	Write-Host $json.ok
+	$l = $json.result.length
 	$i = 0
 	Write-Host $json.result
 	Write-Host $json.result.length
